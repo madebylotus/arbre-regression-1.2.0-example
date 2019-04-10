@@ -1,24 +1,23 @@
-# README
+# Reproduction Steps
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo illustrates a bug present in [arbre 1.2.0](https://github.com/activeadmin/arbre) as mentioned in the following issue.
 
-Things you may want to cover:
+https://github.com/activeadmin/arbre/issues/119
 
-* Ruby version
+## Installation
 
-* System dependencies
+Setup the vanilla rails app + active admin with standard instructions:
 
-* Configuration
+```
+$> bundle install
+$> rails db:setup
+$> rails s
+```
 
-* Database creation
+Then open open your browser and navigate to edit the first Order, ie:
 
-* Database initialization
+```
+$> open http://localhost:3000/admin/orders/1/edit
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Observe that the 2 payments recorded on the Order are shown twice, resulting in 4 rows.
