@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.2'
 
 gem 'activeadmin', '1.3.1'
+gem 'arbre', '1.2.0' # bug being reproduced
 
 
 
