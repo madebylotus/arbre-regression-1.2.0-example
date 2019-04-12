@@ -16,6 +16,7 @@ ActiveAdmin.register Order do
               td { payments.object.id }
               td { payments.text_field :amount_cents }
             end
+            nil # workaround duplicate display.
           end
         end
       end
